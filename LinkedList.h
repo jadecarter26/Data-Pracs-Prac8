@@ -16,7 +16,7 @@ class LinkedList{
         int getItem(int position);
         void printItems(); 
 
-        //virtual ~LinkedList();
+        virtual ~LinkedList();
     private:
         // when you create linked list object it'll be empty
         Node * head = nullptr; 
