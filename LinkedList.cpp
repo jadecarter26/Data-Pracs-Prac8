@@ -1,11 +1,10 @@
 # include "LinkedList.h"
 # include <iostream> 
 #include <limits> // std::numeric_limits
+
 LinkedList::LinkedList(){
     //head = nullptr;
 }
-
-
 
 void LinkedList::addFront(int newItem) {
     // if list empty
@@ -264,4 +263,17 @@ LinkedList::LinkedList(int *array, int length) {
     for (int i = 0; i < length; i++) {
         addEnd(array[i]);
     }
+}
+
+LinkedList::~LinkedList() {
+    if (this->head == nullptr) {
+        return;
+    }
+    Node * tmp = new Node(); 
+    tmp = this->head;
+    while (tmp->getNext() != nullptr) {
+        tmp = tmp->getNext();
+        this->deleteFront();
+    }
+    delete tmp;
 }
