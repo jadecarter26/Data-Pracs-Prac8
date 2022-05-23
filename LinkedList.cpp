@@ -22,8 +22,8 @@ void LinkedList::addFront(int newItem) {
         myNode->setNext(this->head); 
         this->head = myNode;
         //head->setNext(myNode);
-        std::cout<<myNode->getData()<<std::endl;
-        std::cout<<myNode->getNext()<<std::endl;
+        //std::cout<<myNode->getData()<<std::endl;
+        //std::cout<<myNode->getNext()<<std::endl;
     }
 }
 
@@ -48,7 +48,7 @@ void LinkedList::addEnd(int newItem) {
         myNode->setNext(nullptr); 
         // set temp to point to myNode
         temp->setNext(myNode); 
-        std::cout<<myNode->getData()<<std::endl;
+        //std::cout<<myNode->getData()<<std::endl;
     }
 
 }
@@ -260,3 +260,8 @@ void LinkedList::printItems() {
 
 }
 
+LinkedList::LinkedList(int *array, int length) {
+    for (int i = 0; i < length; i++) {
+        addEnd(array[i]);
+    }
+}

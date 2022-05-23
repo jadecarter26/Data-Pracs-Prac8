@@ -17,3 +17,5 @@ void Node::setNext(Node * _next) {
 Node * Node::getNext(){
     return next;
 }
+
+Node::Node(int data, Node *next) : data(data), next(next) {}

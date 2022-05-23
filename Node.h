@@ -4,6 +4,7 @@
 class Node{
     public: 
         Node(); 
+        Node(int data, Node *next);
         void setNext(Node * _next); // set next node
         Node * getNext(); // returns pointer to the next node
         void setData(int _data); 
